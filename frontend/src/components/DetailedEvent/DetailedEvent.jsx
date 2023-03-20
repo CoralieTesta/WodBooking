@@ -114,9 +114,9 @@ export function DetailedEvent({
     }
     if(validate) {
         return(
-            <>
+            <div>
                 <ModalValidate modalText={modalText} />
-            </>
+            </div>
         )
     }
     return(

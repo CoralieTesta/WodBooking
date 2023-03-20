@@ -1,5 +1,5 @@
 .container {
-    width: 100%;
+    width: 95%;
 }
 
 .li {
@@ -26,4 +26,10 @@
 
 .noBooking {
     margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .liItem {
+        font-size: 18px;
+    }
 }

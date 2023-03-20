@@ -1,17 +1,16 @@
 .container {
-    height: 700px;
+    height: 1700px;
     background-color: white;
     position: absolute;
     z-index: 9;
     top:0;
-    width: 100%;
+    width: 90%;
 }
 
 .box {
     background-color: rgb(181, 15, 3);
     color: white;
     font-size: 30px;
-    width: 400px;
     margin: auto;
     height: 100px;
     justify-content: center;
