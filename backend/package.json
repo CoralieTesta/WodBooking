@@ -6,5 +6,9 @@
     "mongoose": "^6.10.0",
     "mongoose-unique-validator": "^3.1.0",
     "nodemon": "^2.0.20"
-  }
+  },
+  "scripts": {
+   "build": "babel server.js -d dist",
+   "start": "node server.js"
+ }
 }
