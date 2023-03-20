@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px grey;
+    min-height: 35px;
+    padding-top: 5px;
+    background-color: rgba(237, 242, 245, 0.932);
+    cursor: pointer;
+}
+
+.registeredNb {
+    background-color: rgb(24, 3, 89);
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+}

@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+    background-color: rgb(205, 231, 231);
+    height: 220px;
+    position: relative;
+    border:dashed 1px black;
+}
+
+.closeIcon {
+    position: absolute;
+    top:4px;
+    right:4px;
+    cursor: pointer;
+}
+
+.closeIcon:hover {
+    color: red;
+}
+
+.icon{
+    padding-top: 12px;
+}
+
+.title {
+    font-weight: 700;
+    font-style: 30px;
+    padding-top: 1px;
+}
+
+.subContainer{
+    display: flex;
+    margin: auto;
+    width: 120px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subSubContainer {
+    width: 100%;
+}
+
+.data {
+    font-weight: 500;
+}
+
+.registerBtn {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: black;
+    color:white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.registerBtn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
