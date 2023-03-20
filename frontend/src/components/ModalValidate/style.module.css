@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 9;
     top:0;
-    width: 90%;
+    width: 98%;
 }
 
 .box {
@@ -17,4 +17,10 @@
     padding-top: 80px;
     margin-top: 50px;
 
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
 }
