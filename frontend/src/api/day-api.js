@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "http://localhost:3000/api/day"
+const BASE_URL = "https://wodbooking.onrender.com/api/day"
 
 
 export class DayAPI{
