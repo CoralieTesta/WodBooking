@@ -90,8 +90,8 @@ export function Bookings() {
                     À venir
                 </button>
             </div>
-            {isFutureSelected?
-                (<ul className={s.ul}>
+            {isFutureSelected && futureBookingArray.length > 0 &&
+                <ul className={s.ul}>
                     {futureBookingArray.map(booking =>
                         <li key={booking._id} className={s.li} >
                             <div>
@@ -103,9 +103,10 @@ export function Bookings() {
                             </div>
                         </li>
                     )}
-                </ul>)
-                :
-                (<ul className={s.ul}>
+                </ul>
+            }
+            {!isFutureSelected && pastBookingArray.length>0 &&
+                <ul className={s.ul}>
                     {pastBookingArray.map(booking =>
                         <li key={booking._id} className={s.li} >
                             <div>
@@ -117,8 +118,18 @@ export function Bookings() {
                             </div>
                         </li>
                     )}
-                </ul>)
+                </ul>
+            }
 
+            {isFutureSelected && futureBookingArray.length === 0 &&
+                <div className={s.noBooking}>
+                    Vous n'avez pas de réservation à venir.
+                </div>
+            }
+            {!isFutureSelected && pastBookingArray.length === 0 &&
+                <div className={s.noBooking}>
+                    Vous n'avez pas de réservation passée.
+                </div>
             }
         </div>
     )
