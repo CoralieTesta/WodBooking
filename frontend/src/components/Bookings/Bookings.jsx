@@ -1,8 +1,7 @@
 import { useContext } from "react"
 import UserContext from "../../store/user-context"
 import s from "./style.module.css"
-import { BiCalendar } from "react-icons/bi"
-import { BsClock } from "react-icons/bs"
+import { BookingItem } from "../BookingItem/BookingItem"
 
 export function Bookings() {
     const userCtx = useContext(UserContext)
@@ -27,6 +26,7 @@ export function Bookings() {
     bookingArray.reverse()
     console.log("array after",bookingArray)
 
+
     if(bookingArray.length === 0) {
         return(
             <div className={s.noBooking}>
@@ -38,19 +38,13 @@ export function Bookings() {
         <div className={s.container}>
             <ul className={s.ul}>
                 {bookingArray.map(booking =>
-                    <li className={s.li}>
-                        <div className={s.liContainer}>
-                        <div className={s.liItem}>
-                            <BiCalendar size={22} className={s.icon} />
-                            {booking.date} 
-                        </div>
-                        <div className={s.liItem}>
-                            <BsClock size={22} className={s.icon} />
-                            {booking.startingHour}:00-{booking.startingHour+1}:00 
-                        </div>
-                        <div className={s.liItem}>
-                            {booking.title}
-                        </div>
+                    <li key={booking._id} className={s.li} >
+                        <div>
+                            <BookingItem 
+                            date={booking.date}
+                            startingHour={booking.startingHour}
+                            title={booking.title}
+                        />
                         </div>
                     </li>
                 )}

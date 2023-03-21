@@ -1,10 +1,8 @@
-import { useContext, useRef, useState } from "react"
-import UserContext from "../../../store/user-context"
+import { useRef, useState } from "react"
 import { BsEye, BsEyeSlash } from "react-icons/bs"
 import s from "./style.module.css"
 
 export function LoginForm({onConnectUser, connectMode}) {
-    const userCtx = useContext(UserContext)
     const emailInputRef = useRef()
     const passwordInputRef = useRef()
     const [passwordShown, setPasswordShown] = useState(false)
