@@ -1,9 +1,11 @@
 const express = require('express')
+const cron = require('node-cron');
 const app = express()
 const mongoose = require('mongoose')
 const dayEventsRoutes = require('./routes/dayEvents')
 const dayRoutes = require('./routes/day')
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/user')
+const emailRoutes = require('./routes/email');
 
 mongoose.connect(
     'mongodb+srv://CoralieTesta:Barjobars29@cluster0.zn0gkpg.mongodb.net/?retryWrites=true&w=majority',
@@ -25,6 +27,7 @@ app.use((req, res, next) => {
 
 app.use('/api/dayEvents', dayEventsRoutes)
 app.use('/api/day', dayRoutes)
-app.use('/api/auth', userRoutes);
+app.use('/api/auth', userRoutes)
+app.use('/api/email', emailRoutes);
 
 module.exports = app

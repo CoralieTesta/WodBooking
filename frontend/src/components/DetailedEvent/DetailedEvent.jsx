@@ -8,6 +8,7 @@ import { DayAPI } from "../../api/day-api"
 import { useNavigate } from "react-router-dom"
 import { ModalValidate } from "../ModalValidate/ModalValidate"
 import { UserAPI } from "../../api/user-api"
+import { EmailAPI } from "../../api/email-api"
 
 export function DetailedEvent({
         date, 
@@ -42,6 +43,11 @@ export function DetailedEvent({
         })
     }
 
+    async function sendEmail() {
+        console.log("sendEmail")
+        await EmailAPI.send(userCtx.email, date, startingHour)
+    }
+
     async function bookEvent() {
         console.log("book in detailed")
         await UserAPI.bookEvent({
@@ -65,6 +71,7 @@ export function DetailedEvent({
         if(userCtx.token){
             addParticipant()
             bookEvent()
+            sendEmail()
             
             const modifiedBookingArray=userCtx.bookingArray
             modifiedBookingArray.push({
