@@ -59,11 +59,19 @@ export function Login() {
             };
             localStorage.setItem('token-info', JSON.stringify(dataUserToStore));
             setBookingArray(userData.email)
+            //setTimeout(logoutHandler,60*60*1000) déconnection après 1h
             navigate("/calendar")
         }
         else {
             alert("Données incorrectes")
         }
+    }
+
+    function logoutHandler() {
+        localStorage.removeItem('token-info')
+        localStorage.removeItem('day-info')
+        localStorage.removeItem('quantityProtein-info')
+        window.location.reload(false);
     }
 
     return(

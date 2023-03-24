@@ -6,7 +6,7 @@ import { UserAPI } from "../../api/user-api"
 import UserContext from "../../store/user-context"
 import s from "./style.module.css"
 
-export function BookingItem({date, startingHour, title}) {
+export function BookingItem({date, startingHour, title, future}) {
     const userCtx = useContext(UserContext)
 
     async function removeParticipant() {
@@ -58,12 +58,14 @@ export function BookingItem({date, startingHour, title}) {
             <div className={s.liItem}>
                 {title}
             </div>
-            <button 
-                className={s.btn}
-                onClick={onQuitClick}
-            >
-                Quitter
+            {future &&
+                <button 
+                    className={s.btn}
+                    onClick={onQuitClick}
+                >
+                    Quitter
             </button>
+}
         </div>
     )
 }

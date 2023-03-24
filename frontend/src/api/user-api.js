@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "https://wodbooking.onrender.com/api/auth/"
+const BASE_URL = "https://wodbooking.onrender.com/api/auth"
 
 
 export class UserAPI{

@@ -99,6 +99,7 @@ export function Bookings() {
                                 date={booking.date}
                                 startingHour={booking.startingHour}
                                 title={booking.title}
+                                future={true}
                             />
                             </div>
                         </li>
@@ -114,6 +115,7 @@ export function Bookings() {
                                 date={booking.date}
                                 startingHour={booking.startingHour}
                                 title={booking.title}
+                                future={false}
                             />
                             </div>
                         </li>
